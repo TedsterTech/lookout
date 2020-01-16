@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 PORT = 9890
 
@@ -53,6 +53,6 @@ if __name__ == '__main__':
 	if len(sys.argv) > 1:
 		PORT = sys.argv[1]
 	server = HTTPServer(WSGIContainer(app))
-	print 'Now listening on port ' + str(PORT)
+	print ('Now listening on port ' + str(PORT))
 	server.listen(PORT)
 	IOLoop.instance().start()
