@@ -1,3 +1,9 @@
 *.log
 build
 dist
+*.png
+!static/favicon.png
+*.txt
+!requirements.txt
+!LICENCSE.txt
+!favicon_character.txt
