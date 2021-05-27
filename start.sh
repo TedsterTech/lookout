@@ -3,7 +3,7 @@
 # I realize what this uses is going to make it the ultimate "it works on my machine!111" experience
 
 # Screen or no screen? (:
-if [ "$1" = "--no-screen" ]; then
+if [ "$1" == "--no-screen" ]; then
   use_screen="false"
 else
   # Avoid creating a duplicate screen
@@ -38,7 +38,7 @@ cat "static/index_pregen.html" | sed "s/insert_heartbeat_item/$favicon_character
 
 # And so we start
 echo "Trying to start Lookout"
-if [ "$use_screen" = true ]; then
+if [ "$use_screen" == true ]; then
   echo "Creating a screen with name $screen_name"
   screen -d -m -S "$screen_name" python3 "lookout.py"
 else
